@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from Dynatrace Support -->
+<dynatrace version="6.3.7.1007" date="8/18/16 8:08 PM">
+  <dashboardconfig memento.version="6.3.7.1007" suppresssavewarning="false" created="2016-07-28T10:03:51+0100" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" modifiedbyname="admin" locationascomparesource="false" source="server://tag009441106587" sessionid="Monitoring" opendrilldowninnewdashboard="false" groupname="" autoreplacesession="false" revision="00000156-9f0d-dd00-a16e-f6c892c2d431" locationassource="false" localizationenabled="false" name="PostcodeDashboard" authorname="admin" modified="2016-08-18T20:08:21+0100" id="5d382c6f-7148-4ada-b9f7-05998f042ae3">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" type="browserpathtype" showjavascript="true" />
+      <criterion pageenabled="false" timerenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern match="contains" text="" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern match="contains" text="" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm">
+        <record legacymode="false" context="Server" configuredforfullsplit="false" transaction="PostcodeSplit" />
+      </criterion>
+      <criterion type="casuemdimension" />
+      <criterion type="dbdetails" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion contenttypegroupsmode="all" showrendering="true" javascripttriggersmode="all" isactive="false" shownetwork="true" requestcriterion="ALL" type="riapurepathtype" showjavascript="true" />
+      <criterion includemeasurename="true" includeplatform="true" includetestname="true" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,passed" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API" />
+      <criterion includeplatform="true" type="testsoverview" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe type="Last 5min" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+    <designconfig namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="905e4ff6-2759-4cb5-9174-9d1aa2f87e39" folderid="folder" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
+        <designconfig namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" inherited="true" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://tag009441106587" sessionid="Monitoring" usedashboardsource="true" folderid="folder" locationassource="false" addfilterinfo="false" name="Business Transactions" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.transaction.Transaction" id="905e4ff6-2759-4cb5-9174-9d1aa2f87e39" displaymode="Base">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="INACTIVE" type="analysiscache" />
+        <criterion type="and" />
+        <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+        <criterion mode="all" type="applications" />
+        <criterion type="btm">
+          <record legacymode="false" context="Server" configuredforfullsplit="false" transaction="PostcodeSplit" />
+        </criterion>
+        <criterion type="casuemdimension" />
+        <criterion type="dbdetails" />
+        <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="or" />
+        <criterion mode="all" enduser="false" type="purepaths" />
+        <criterion type="threads" enabled="false" filterbyid="false" />
+        <criterion type="timeframe">
+          <timeframe type="Last 5min" />
+        </criterion>
+        <criterion customdefaultcolumnindex="0" columnlabel="" columnindex="0" isactive="false" sort="highestValues" type="topx" maxnrofrecords="10" customdefaultcolumnlabel="" />
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <criterion type="webpage">
+          <textpattern name="timerName" type="contains" enabled="true" />
+          <textpattern name="pageContext" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="webrequest">
+          <filteruripattern>
+            <stringmatchpattern match="contains" text="" />
+          </filteruripattern>
+          <filterquerypattern>
+            <stringmatchpattern match="contains" text="" />
+          </filterquerypattern>
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="500,500" />
+      <datamodelconfig>
+        <table sortcolumn="4" drawcolumn="-1" columnorder="18,0,1,2,3,19,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <dyncolumns />
+          <column forcevisible="false" hidden="false" width="160" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="160" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="125" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="125" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="Down" />
+          <column forcevisible="false" hidden="true" width="130" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="6" sort="None" />
+          <column forcevisible="false" hidden="false" width="130" index="7" sort="None" />
+          <column forcevisible="false" hidden="false" width="130" index="8" sort="None" />
+          <column forcevisible="false" hidden="false" width="130" index="9" sort="None" />
+          <column forcevisible="false" hidden="false" width="130" index="10" sort="None" />
+          <column forcevisible="false" hidden="false" width="130" index="11" sort="None" />
+          <column forcevisible="false" hidden="false" width="130" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="160" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="15" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="16" sort="None" />
+          <column forcevisible="false" hidden="true" width="130" index="17" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="18" sort="None" />
+          <column forcevisible="false" hidden="false" width="90" index="19" sort="None" />
+        </table>
+      </datamodelconfig>
+      <analyzerparameters reanalyze="true" analyzerrecordlimit="10000" requiredrilldowndata="true" context="SERVER" />
+      <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="true" logxaxis="false" title="Count" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="false" charttype="PieChart" aggregation.absolute="false" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="true" showlegend="true" lockyaxis="true" showlabels="true">
+        <legendcomposition measure="true">
+          <pielabelcomposition unit="true" measure="true" value="true" />
+        </legendcomposition>
+        <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+      </chart>
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
