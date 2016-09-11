@@ -76,12 +76,12 @@ else
 	<title>Map Test Tomcat</title>
 	<meta charset="utf-8" />
 
-	<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
 </head>
 <body>
 	<div id="mapid" style="width: 1000px; height: 1000px;"></div>
 
-	<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
 	<script>
 
 		var mymap = L.map('mapid').setView([53.128280, -1.732382], 6);
@@ -90,7 +90,7 @@ else
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+				'Imagery ï¿½ <a href="http://mapbox.com">Mapbox</a>',
 			id: 'mapbox.streets'
 		}).addTo(mymap);
 <%
